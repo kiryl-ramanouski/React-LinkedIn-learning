@@ -30,7 +30,7 @@
 					<section>
 						<ul>
 							{props.dishes.map((dish) => (
-								<li>{dish}</li>
+								<li key={dish.id}>{dish.title}</li>
 							))}
 						</ul>
 					</section>
@@ -51,11 +51,16 @@
 				'Salmon and Potatoes',
 			];
 
+			const dishesObj = dishes.map((dish, i) => ({
+				id: i,
+				title: dish,
+			}));
+
 			function App() {
 				return (
 					<div>
 						<Header name='Kiryl' />
-						<Main adjective='amazing' dishes={dishes} />
+						<Main adjective='amazing' dishes={dishesObj} />
 						<Footer year={new Date().getFullYear()} />
 					</div>
 				);
