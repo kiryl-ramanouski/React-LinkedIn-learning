@@ -1,6 +1,11 @@
 import './App.css';
 import { useState } from 'react';
 
+// I can also use libraries for forms, such as
+// formik.org;
+// react-hook-form.com
+// And there are a lot of useful hooks useHooks.com
+
 function useInput(initialValue) {
   const [value, setValue] = useState(initialValue);
   return [
