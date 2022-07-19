@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import './App.css';
 
 function Home() {
@@ -21,6 +21,7 @@ export function About() {
         <Link to='/contact'>Contact</Link>
       </nav>
       <h1>About Us</h1>
+      <Outlet />
     </div>
   );
 }
@@ -33,6 +34,14 @@ export function Contact() {
         <Link to='/about'>About</Link>
       </nav>
       <h1>Contact Us</h1>
+    </div>
+  );
+}
+
+export function History() {
+  return (
+    <div>
+      <h1>Our History</h1>
     </div>
   );
 }
